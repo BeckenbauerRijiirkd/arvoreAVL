@@ -113,6 +113,24 @@ public class Arvore {
       inOrder(no.getDireito());
     }
   }
+  public void preOrder(No no) {
+    System.out.println(no.getValor() + " (" + no.getFb() + ")");
+    if (no.getEsquerdo() != null) {
+      inOrder(no.getEsquerdo());
+    }
+    if (no.getDireito() != null) {
+      inOrder(no.getDireito());
+    }
+  }
+  public void posOrder(No no) {
+    if (no.getEsquerdo() != null) {
+      inOrder(no.getEsquerdo());
+    }
+    if (no.getDireito() != null) {
+      inOrder(no.getDireito());
+    }
+    System.out.println(no.getValor() + " (" + no.getFb() + ")");
+  }
 
   public No getRaiz() {
     return this.raiz;
