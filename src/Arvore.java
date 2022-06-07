@@ -43,10 +43,10 @@ public class Arvore {
           pai.setFb(pai.getFb() - 1);
           if (pai.getFb() < -1) {
             if (pai.getDireito() != null && pai.getDireito().getFb() > 0) {
-              System.out.println("Rotacao Esquerda Dupla em " + pai.getValor());
+              System.out.println("** Rotacao Esquerda Dupla em " + pai.getValor());
               pai = RotacaoDupla.rotacaoEsquerdaDupla(this.raiz, pai);
             } else if (pai.getDireito() != null && pai.getDireito().getFb() <= 0) {
-              System.out.println("Rotacao Esquerda Simples em " + pai.getValor());
+              System.out.println("** Rotacao Esquerda Simples em " + pai.getValor());
               pai = RotacaoSimples.rotacaoEsquerdaSimples(this.raiz, pai);
             }
           }
@@ -57,10 +57,10 @@ public class Arvore {
           pai.setFb(pai.getFb() + 1);
           if (pai.getFb() > 1) {
             if (pai.getEsquerdo() != null && pai.getEsquerdo().getFb() < 0) {
-              System.out.println("rotacao direita dupla em " + pai.getValor());
+              System.out.println(" ** rotacao direita dupla em " + pai.getValor());
               pai = RotacaoDupla.rotacaoDireitaDupla(this.raiz, pai);
             } else if (pai.getEsquerdo() != null && pai.getEsquerdo().getFb() >= 0) {
-              System.out.println("Teste rotacao direita simples em " + pai.getValor() + "(" + pai.getFb() + ")");
+              System.out.println("** rotacao direita simples em " + pai.getValor() + "(" + pai.getFb() + ")");
               pai = RotacaoSimples.rotacaoDireitaSimples(this.raiz, pai);
             }
           }
