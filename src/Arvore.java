@@ -113,6 +113,8 @@ public class Arvore {
       inOrder(no.getDireito());
     }
   }
+
+  //PRE ORDER
   public void preOrder(No no) {
     System.out.println(no.getValor() + " (" + no.getFb() + ")");
     if (no.getEsquerdo() != null) {
@@ -122,6 +124,8 @@ public class Arvore {
       inOrder(no.getDireito());
     }
   }
+
+  //POS ORDER
   public void posOrder(No no) {
     if (no.getEsquerdo() != null) {
       inOrder(no.getEsquerdo());
